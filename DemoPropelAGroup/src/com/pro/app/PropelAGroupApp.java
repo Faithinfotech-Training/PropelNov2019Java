@@ -6,5 +6,6 @@ public class PropelAGroupApp {
 
 		System.out.println("PROPEL A GROUP");
 		System.out.println("propelA project");
+		System.out.println("/////////////");
 	}
 }
