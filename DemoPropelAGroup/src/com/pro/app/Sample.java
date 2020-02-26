@@ -6,5 +6,6 @@ public class Sample {
 	private Integer b;
 	private Integer c;
 	private Integer d;
+	//bean class
 
 }
