@@ -4,6 +4,6 @@ public class FaithInfortech {
 
 	void function() {
 		System.out.println("Swagatika");
-		///add
+		///add new
 	}
 }
