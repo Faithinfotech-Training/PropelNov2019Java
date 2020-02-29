@@ -1,0 +1,38 @@
+Create table Resources(
+	Resource_Type_Id int Primary Key Auto_Increment,
+	Resource_Type Varchar(20) Not null
+);
+
+
+create table Resource_Details(
+	Resource_Id int Primary Key Auto_Increment,
+	Resource_Type_Id int references Resources(Resource_Type_Id) on delete cascade,
+	Resource_Capacity Int Not Null,
+	No_Of_Systems Int Not Null,
+	Projector Varchar(1) Not Null,
+	White_Board Varchar(1) Not Null,
+	Photo blob,
+	Resource_Rate Varchar(1) Not Null,
+	Type_Of_Use Varchar(20) Not Null,
+	IsAccepted char(1),
+	IsBooked char(1),
+	IsActive char(1)
+);
+
+
+create table Booking_details(
+	Booking_id int Primary Key Auto_Increment,
+	Resource_Id int references Resource_Details(Resource_Id) on delete cascade,	
+	Cust_name Varchar(30) Not null,
+	Cust_Address Varchar(200) Not null,
+	PhoneNumber Varchar(15) Not null,
+	Email Varchar(30) Not null,
+	Start_Date date Not null,
+	End_Date Date Not Null,
+	Purpose Varchar(250) Not Null,
+	Booking_Status char(1),
+	IsActive char(1)
+);
+
+
+
